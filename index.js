@@ -63,3 +63,27 @@ const db = mysql.createConnection(
             case "view all employees":
               allEmp();
               break;
+              case "add a department":
+                addDep();
+                break;
+    
+              case "add a role":
+                addRole();
+                break;
+    
+              case "add an employee":
+                addEmp();
+                break;
+    
+              case "update an employee role":
+                empUpdate();
+                break;
+    
+              default:
+                console.log = "program has quit";
+                process.exit();
+            }
+          })
+      );
+    }
+    
