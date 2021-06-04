@@ -86,4 +86,121 @@ const db = mysql.createConnection(
           })
       );
     }
-    
+    // //display all departments
+
+// SELECT * from department;
+function allDep() {
+  const sql = `SELECT * from department`;
+  db.query(sql, function (err, res) {
+    if (err) throw err;
+    console.table("employee", res);
+    promptUser();
+  });
+}
+
+//"view all roles",
+// SELECT * from ROLES;
+function allRoles() {
+  const sql = `SELECT * from roles`;
+  db.query(sql, function (err, res) {
+    if (err) throw err;
+    console.table("roles", res);
+    promptUser();
+  });
+}
+
+//"view all employees",
+// SELECT * FROM employee
+// LEFT JOIN roles ON employee.roles_id = roles.id;
+
+function allEmp() {
+  const sql = `SELECT * FROM employee LEFT JOIN roles ON employee.roles_id = roles.id`;
+  db.query(sql, function (err, res) {
+    if (err) throw err;
+    console.table("roles", res);
+    promptUser();
+  });
+}
+
+//"add a department",
+// INSERT INTO department (name)
+// Values('');
+
+function addDep() {
+  inquirer
+    .prompt([
+      {
+        name: "newDep",
+        message: "what is the new Departments Name",
+        validate: (newDepInput) => {
+          if (newDepInput) {
+            return true;
+          } else {
+            console.log("please enter a New Department Name");
+            return false;
+          }
+        },
+      },
+    ])
+    .then((answer) => {
+      console.log(answer.newDep);
+      const newDepartmentName = answer.newDep;
+      const sql = `INSERT INTO department (name) VALUES (?)`;
+      db.query(sql, [newDepartmentName], function (err, res) {
+        if (err) throw err;
+        console.table("department", res);
+        promptUser();
+      });
+    });
+}
+
+function addRole() {
+  inquirer.prompt([
+    {
+      name: "newTitle",
+      message: "what is the new Title Name ",
+      validate: (newTitleInput) => {
+        if (newTotleInput) {
+          return true;
+        } else {
+          console.log("please enter a New Title");
+          return false;
+        }
+      },
+    },
+    {
+      name: "newSalary",
+      message: "what is the new Roles Salary in the format of XXXXX.XX",
+      validate: (newSalaryInput) => {
+        if (newSalaryInput) {
+          return true;
+        } else {
+          console.log("please enter a Salary");
+          return false;
+        }
+      },
+    },
+    {
+      name: "newDepId",
+      message: "please specify a new Department ID (numbers only)",
+      validate: (newDepID) => {
+        if (newDepID) {
+          return true;
+        } else {
+          console.log("please enter a new departmen ID ");
+          return false;
+        }
+      },
+    },
+  ])
+//   .then((answer) => {
+//     console.log(answer.newTitle, answer.newSalary, answer.newDepID);
+//     const addARole = answer.newTitle, answer.newSalary, answer.newDepID;
+//     const sql = `INSERT INTO rolls (title, salary, department_id) VALUES (?,?,?)`;
+//     db.query(sql, [addARole], function (err, res) {
+//       if (err) throw err;
+//       console.table("roles", res);
+//       promptUser();
+//     });
+//   });
+}
