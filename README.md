@@ -8,7 +8,7 @@ AS A business owner
 I WANT to be able to view and manage the departments, roles, and employees in my company SO THAT I can organize and plan my business
 
 Github User Name
-Fraudwheeldrive
+Reisnern
 
 Installation
 please ensure you have the required NPM modules and MySQL installed installed locally clone this repo and install npm modules using following commands. npm i console.table express inquire mysql
@@ -20,7 +20,8 @@ at this point you have launched the application, please follow the promp instruc
 demonstration
 This is how the command line application looks
 
-alt text
+![Employee Tracker screen](https://user-images.githubusercontent.com/77903140/120899439-6493cf80-c5f5-11eb-9cee-5e09b3e611a2.png)
+
 
 Please refer to video below to see it in action
 
