@@ -8,7 +8,7 @@ AS A business owner
 I WANT to be able to view and manage the departments, roles, and employees in my company SO THAT I can organize and plan my business
 
 Github User Name
-Fraudwheeldrive
+Reisnern
 
 Installation
 please ensure you have the required NPM modules and MySQL installed installed locally clone this repo and install npm modules using following commands. npm i console.table express inquire mysql
