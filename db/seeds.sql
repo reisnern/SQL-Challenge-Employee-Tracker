@@ -20,12 +20,12 @@ VALUES
 
 INSERT INTO employee (first_name, last_name, roles_id , manager_id)
 VALUES 
-('Kylo' , 'Dog', 1 , 2),
-('Rey' , 'Core', 2, 2),
-('Luke', 'Cat', 3 , null),
-('Leia', 'Kitty', 4 , null),
-('Annakin' , 'Pup', 5, null),
-('Obi-Wan', 'Woof', 6, null);
+('Dale' , 'Dog', 1 , 2),
+('Andrew' , 'Core', 2, 2),
+('Sam', 'Cat', 3 , null),
+('Pip', 'Kitty', 4 , null),
+('Annie' , 'Pup', 5, null),
+('Rosie', 'Woof', 6, null);
 
 
 © 2021 GitHub, Inc.
