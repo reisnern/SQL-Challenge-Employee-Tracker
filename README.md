@@ -24,7 +24,7 @@ alt text
 
 Please refer to video below to see it in action
 
-https://drive.google.com/file/d/1DgYOmNSl7MLAm96moOye8k69gGeSBh3t/view
+https://drive.google.com/file/d/1DgYOmNSl7MLAm96moOye8k69gGeSBh3t/view?usp=sharing
 
 Contributing
 ensure a pull request made before merging
